@@ -84,10 +84,10 @@ main {
 .offer__title {
     height: 180px;
     width: 593px;
-    font-family: 'Forum', sans-serif;
+    font-family: 'Forum', cursive;
     font-style: normal;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 75px;
     line-height: 90px;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -157,7 +157,7 @@ main {
 
 .Visiting h1 {
     padding-top: 75px;
-    font-family: 'Forum', sans-serif;
+    font-family: 'Forum', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 80px;
@@ -204,12 +204,12 @@ main {
 
 .tour__name {
     margin-left: 0px;
-    font-family: 'Forum', sans-serif;
+    font-family: 'Forum', cursive;
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 35px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     text-transform: uppercase;
     color: #000000;
 }
@@ -266,7 +266,7 @@ main {
 .explore__title {
     margin-left: 0px;
     margin-bottom: 25px;
-    font-family: 'Forum', sans-serif;
+    font-family: 'Forum', cursive;
     font-style: normal;
     font-weight: normal;
     font-size: 65px;
@@ -297,7 +297,170 @@ main {
     color: #FFFFFF;
 }
 
+/***************** MAIN__VIDEO Section ************/
 
+.Video {
+    width: 100%;
+    height: 1396px;
+    overflow: hidden;
+}
 
+.video__journey__header {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+}
 
+.video__title {
+    width: 606px;
+    margin-left: 0px;
+}
+
+.video__title p {
+    font-family: 'Forum', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #9D8665;
+}
+
+.video__information {
+    margin-right: 0px;
+    width: 720px;
+}
+
+.video__information p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
+    align-items: center;
+    color: #000000;
+}
+
+.video__container {
+    margin-top: 75px;
+    width: 1440px;
+    height: 650px;
+}
+
+.video__recomendation {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.recomended__videos {
+    width: 452px;
+    height: 254px;
+    margin: 0px;
+}
+
+.video__slider {
+    margin-top: 40px;
+    background: black;
+    height: 200px;
+    height: 50px;
+}
+
+/***************** MAIN__GALLERY Section ************/
+
+.Gallery {
+    background: #000;
+    width: 1920px;
+    height: 2200px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.gallery__title {
+    margin-left: 0px;
+    padding-top: 75px;
+    width: 518px;
+    height: 90px;
+    font-family: 'Forum', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.gallery__images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first__column, .second__column, .third__column {
+    width: 456px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery__pictures {
+    margin-bottom: 24px;
+}
+
+.first__column {
+    margin-top: 125px;
+    margin-left: 0px;    
+}
+
+.second__column {
+    margin-top: 75px;
+}
+
+.third__column {
+    margin-top: 125px;    
+}
+
+/***************** MAIN__VIDEO Section ************/
+
+.Tickets {
+    width: 100%;
+    height: 893px;
+    overflow: hidden;
+}
+
+.tickets__title {
+    padding-top: 75px;
+    margin-left: 0px;
+    width: 472px;
+    height: 90px;
+    font-family: 'Forum', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+}
+
+.tickets__line {
+    margin: 25px 0px 75px 0px;
+    width: 1440px;
+    height: 3px;
+    background: #710707;
+    border-radius: 0px;
+}
+
+.tickets__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tickets__picture {
+    margin-left: 0px;
+}
 
