@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museum</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico"/>
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +29,12 @@
                 <div class="header__right">
                     <nav>
                         <ul class="header__menu">
-                            <li class="menu__list"><a href="#" class="menu__links"></a>Visiting</li>
-                            <li class="menu__list"><a href="#" class="menu__links"></a>Explore</li>
-                            <li class="menu__list"><a href="#" class="menu__links"></a>Video</li>
-                            <li class="menu__list"><a href="#" class="menu__links"></a>Gallery</li>
-                            <li class="menu__list"><a href="#" class="menu__links"></a>Tickets</li>
-                            <li class="menu__list"><a href="#" class="menu__links"></a>Contacts</li>
+                            <li class="menu__list"><a href="#" class="menu__links">Visiting</a></li>
+                            <li class="menu__list"><a href="#" class="menu__links">Explore</a></li>
+                            <li class="menu__list"><a href="#" class="menu__links">Video</a></li>
+                            <li class="menu__list"><a href="#" class="menu__links">Gallery</a></li>
+                            <li class="menu__list"><a href="#" class="menu__links">Tickets</a></li>
+                            <li class="menu__list"><a href="#" class="menu__links">Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -85,7 +86,7 @@
             </div>
         </section>
 
-        <section class="Visiting">
+        <section class="Visiting" id="visiting">
             <div class="wrapper">
                 <h2>Virtual tour</h2>
                 <div class="visiting__line">
@@ -161,7 +162,7 @@
             </div>
         </section>
 
-        <section class="Explore">
+        <section class="Explore" id="explore">
             <div class="wrapper">
                 <div class="explore__container">
                     <div class="explore__left">
@@ -193,7 +194,7 @@
             </div>
         </section>
 
-        <section class="Video">
+        <section class="Video" id="video">
             <div class="wrapper">
                 <div class="video__journey__header">
                     <div class="video__title">
@@ -237,7 +238,7 @@
             </div>
         </section>
 
-        <section class="Gallery">
+        <section class="Gallery" id="gallery">
             <div class="wrapper">
                 <div class="gallery__title">
                     <h2>Art gallery</h2>
@@ -275,7 +276,7 @@
             </div>
         </section>
 
-        <section class="Tickets">
+        <section class="Tickets" id="tickets">
             <div class="wrapper">
                 <div class="tickets__title">
                     <h2>Buy tickets</h2>
@@ -316,18 +317,27 @@
 
                                 <p class="Basic">Basic 18+</p>
 
-                                <div class="counter__container">
-                                    <button class="minus">-</button>
-                                    <input type="number" class="counter" name="quantity" min="0" max="20">
-                                    <button class="plus">+</button>
+                                <div class="number-input">
+                                    <button
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    </button>
+                                    <input class="quantity" min="0" max="20" name="quantity" value="1" type="number">
+                                    <button
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus">
+                                    </button>
                                 </div>
 
                                 <p class="Senior">Senior 65+</p>
 
-                                <div class="counter__container">
-                                    <button class="minus">-</button>
-                                    <input type="number" class="counter" name="quantity" min="0" max="20">
-                                    <button class="plus">+</button>
+                                <div class="number-input">
+                                            <button
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                            </button>
+                                            <input class="quantity" min="0" max="20" name="quantity" value="1" type="number">
+                                            <button
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                class="plus">
+                                            </button>
                                 </div>
 
                                 <div class="price__container">
@@ -336,7 +346,7 @@
                                 </div>
 
                                 <button class="button__buy">
-                                    <a href="#">Buy Now</a>
+                                    <a href="./booking_tickets.html">Buy Now</a>
                                 </button>
                                 
                             </div>
@@ -345,11 +355,11 @@
                 </div>
             </div>
             <div class="parallax">
-                <img class="image__parallax" src="assets/img/parallax.jpg" alt="parallax__image"/>
+                <img class="image__parallax" src="assets/img/parallax 1.png" alt="parallax__image"/>
             </div>
         </section>
 
-        <section class="Contacts">
+        <section class="Contacts" id="contacts">
             <div class="wrapper">
                 <h2 class="contact__title">Contacts</h2>
 
@@ -390,17 +400,17 @@
                     <div class="footer__information">
                         <div class="footer__column">
                             <ul class="footer__menu">
-                                <li class="footer__list"><a class="footer__list__links">Visiting</a></li>
-                                <li class="footer__list"><a class="footer__list__links">Explore</a></li>
-                                <li class="footer__list"><a class="footer__list__links">Video</a></li>
+                                <li class="footer__list"><a class="footer__list__links" href="#visiting">Visiting</a></li>
+                                <li class="footer__list"><a class="footer__list__links" href="#explore">Explore</a></li>
+                                <li class="footer__list"><a class="footer__list__links" href="#video">Video</a></li>
                             </ul>
                         </div>
     
                         <div class="footer__column">
                             <ul class="footer__menu">
-                                <li class="footer__list"><a class="footer__list__links">Gallery</a></li>
-                                <li class="footer__list"><a class="footer__list__links">Tickets</a></li>
-                                <li class="footer__list"><a class="footer__list__links">Contacts</a></li>
+                                <li class="footer__list"><a class="footer__list__links" href="#gallery">Gallery</a></li>
+                                <li class="footer__list"><a class="footer__list__links" href="#tickets">Tickets</a></li>
+                                <li class="footer__list"><a class="footer__list__links" href="#contacts">Contacts</a></li>
                             </ul>
                         </div>
                     </div>
@@ -408,23 +418,23 @@
 
                 <div class="footer__links">
                     <div class="social__links">
-                        <img src="assets/img/footer/youtube.svg" alt="youtube"/>
+                        <a href="https://www.youtube.com/" class="soc__links" target="_blank"><img src="assets/img/footer/youtube.svg" alt="youtube"/></a>
                     </div>
 
                     <div class="social__links">
-                        <img src="assets/img/footer/instagram.svg" alt="instagram"/>
+                        <a href="https://www.instagram.com/" class="soc__links" target="_blank"><img src="assets/img/footer/instagram.svg" alt="instagram"/></a>
                     </div>
 
                     <div class="social__links">
-                        <img src="assets/img/footer/facebook.svg" alt="facebook"/>
+                        <a href="https://www.facebook.com/" class="soc__links" target="_blank"><img src="assets/img/footer/facebook.svg" alt="facebook"/></a>
                     </div>
 
                     <div class="social__links">
-                        <img src="assets/img/footer/twitter.svg" alt="twitter"/>
+                        <a href="https://twitter.com/" class="soc__links" target="_blank"><img src="assets/img/footer/twitter.svg" alt="twitter"/></a>
                     </div>
 
                     <div class="social__links">
-                        <img src="assets/img/footer/printerest.svg" alt="printerest"/>
+                        <a href="https://www.pinterest.com/" class="soc__links" target="_blank"><img src="assets/img/footer/printerest.svg" alt="pinterest"/></a>
                     </div>
                 </div>
             </div>

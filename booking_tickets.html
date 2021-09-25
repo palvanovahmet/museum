@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/umu0tcu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="close__window">
+            <span class="close"></span>
+        </div>
+
+        <div class="booking__wrapper">
+            <div class="booking__form">
+                <form class="booking__tickets">
+                    <img src="assets/img/booking-tickets/logo.svg" width="85" height="41" alt="logo"/>
+                    <p class="form__title">Booking tickets</p>
+                    <p class="form__text">Tour to Louvre</p>
+                    <div class="booking__line">
+
+                    </div>
+
+                    <div class="data__and__time">
+                        <input type="date" class="data" onfocus="(this.type='date')" placeholder="Date"/>
+                        <input type="time" class="time"/>
+                    </div>
+                    <div class="name">
+                        <img src="assets/img/booking-tickets/name.svg" alt="name__icon"/>
+                        <input class="infoPlaceholder" placeholder="Name" type="text"/>
+                    </div>
+
+                    <div class="email">
+                        <img src="assets/img/booking-tickets/email.svg" alt="mail__icon"/>
+                        <input class="infoPlaceholder" placeholder="E-mail" type="email"/>
+                    </div>
+
+                    <div class="phone">
+                        <img src="assets/img/booking-tickets/tel.svg" alt="phone__icon"/>
+                        <input class="infoPlaceholder" placeholder="Phone" type="number"/>
+                    </div>
+                     
+                    <div class="ticket__type">
+                        <img src="assets/img/booking-tickets/Vector.svg" alt="ticket__type__icon"/>
+                        <select class="select" placeholder="Ticket Type">
+                            <option value="" disabled selected>Select your ticket</option>
+                            <option value="Basic">Basic 18+</option>
+                            <option value="Senior">Senior 65+</option>
+                        </select>
+                    </div>
+
+                    <div class="select__tickets">
+                        <input id="entry__ticket" type="text" placeholder="Entry Ticket"/>
+                        <div class="select__tickets__line">
+                            
+                        </div>
+
+                        <div class="entry__basic">
+                            <span>Basic 18+ (20 €)</span>
+                            <div class="pay__ticket">
+                                <button class="minus"><p>-</p></button>
+                                <p class="ticket__counter">0</p>
+                                <button class="plus"><p>+</p></button>
+                            </div>
+                        </div>
+
+                        <div class="entry__senior">
+                            <span>Senior 65+ (10 €)</span>
+                            <div class="pay__ticket">
+                                <button class="minus"><p>-</p></button>
+                                <p class="ticket__counter">0</p>
+                                <button class="plus"><p>+</p></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="booking__information">
+                <div class="booking__row">
+                    <div class="ticket__information">
+                        <p>Overview</p>
+                        <p>Tour to Louvre</p>
+    
+                        <div class="date">
+                            <img/>
+                            <p>Friday, August 19</p>
+                        </div>
+    
+                        <div class="time">
+                            <img/>
+                            <p>16 : 30</p>
+                        </div>
+    
+                        <div class="exhibition">
+                            <img/>
+                            <p>Temporary exhibition</p>
+                        </div>
+                    </div>
+
+                    <img src="assets/img/booking-tickets/Rectangle 4.png" alt="louvre"/>
+                </div>
+                
+                
+            </div>
+        </div>    
+    </div>
+</body>
+</html>
