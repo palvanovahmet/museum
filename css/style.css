@@ -403,7 +403,7 @@ main {
 .video__container {
     margin-top: 75px;
     width: 1440px;
-    height: 650px;
+    height: 735px;
 }
 
 .video__recomendation {
@@ -420,9 +420,31 @@ main {
 
 .video__slider {
     margin-top: 40px;
-    background: black;
-    height: 200px;
-    height: 50px;
+    margin-bottom: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 12px;
+}
+
+.video__slider__container {
+    display: flex;
+    width: 200px;
+    height: 12px;
+    justify-content: space-between;
+}
+
+.slider__left, .slider__right {
+    border: 0px;
+    background: transparent;
+}
+
+.video__circle {
+    width: 12px;
+    height: 12px;
+    background: #999999;
+    border-radius: 50%;
 }
 
 /***************** MAIN__GALLERY Section ************/
@@ -588,7 +610,7 @@ main {
 }
 
 .Basic, .Senior {
-    width: 150px;
+    width: 156px;
     height: 26px;
     font-family: 'Roboto' , sans-serif;
     font-style: normal;
@@ -596,7 +618,6 @@ main {
     font-size: 22px;
     line-height: 26px;
     color: #000000;
-    margin-bottom: 15px;
 }
 
 /* Убираем скроллы/стрелы для input="number" это для браузера Chrome */
@@ -658,6 +679,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number-input {
+    margin-top: 15px;
+    margin-bottom: 10px;
     /* border: 2px solid #ddd; */
     display: inline-flex;
     border: 3px solid #000000;
@@ -1027,7 +1050,12 @@ footer {
     justify-content: flex-end;
 }
 
-.close {
+.close  {
+    border: 0px;
+    background: transparent;
+}
+
+/* .close {
     position: absolute;
     right: 32px;
     top: 32px;
@@ -1055,10 +1083,12 @@ footer {
 
 .close:after {
     transform: rotate(-45deg);
-}
+} */
 
 .booking__wrapper {
-    width: 970px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .booking__tickets {
@@ -1097,9 +1127,37 @@ footer {
     margin-bottom: 60px;
 }
 
+.input__container {
+    height: 460px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .data__and__time {
     display: flex;
     justify-content: space-between;
+}
+
+.data, .time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+}
+
+input[type="date"], input[type="time"] {
+    border: 0px;
+    height: 40px;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
 }
 
 .data, .time, .name, .email, .phone, .ticket__type{
@@ -1110,6 +1168,32 @@ footer {
     width: 190px;
     height: 45px;
     padding: 5px 15px;
+}
+
+::-webkit-calendar-picker-indicator { 
+    background-image: url('../assets/img/booking-tickets/arrow.svg');
+}
+
+::-webkit-select-picker-indicator {
+    background-image: url('../assets/img/booking-tickets/arrow.svg');
+}
+
+::-webkit-datetime-edit-fields-wrapper {
+    display: none;
+    background: transparent;
+    border: none;
+}
+
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-text {
+    font-family: 'Roboto', sans-serif;
+    font-family: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
 }
 
 .infoPlaceholder::-webkit-input-placeholder {
@@ -1140,7 +1224,7 @@ input[type="text"], input[type="email"], input[type="number"] {
     display: flex;
     align-items: center;
     color: #030303;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     border: 0px;
 }
 
@@ -1180,8 +1264,68 @@ input[type="text"], input[type="email"], input[type="number"] {
     opacity: 0.9;
 }
 
+input:focus, select:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder { 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #030303;
+}
+
+::-moz-placeholder { 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #030303;
+}
+
+:-ms-input-placeholder { 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #030303;
+}
+
+:-moz-placeholder { 
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #030303;
+}
+
 #entry__ticket {
     margin-left: 0px;
+    font-family: 'Forum', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: #9D8665;
+}
+
+.margin__icons {
+    margin-right: 15px;
 }
 
 .entry__basic {
@@ -1232,12 +1376,303 @@ input[type="text"], input[type="email"], input[type="number"] {
     color: #fff;
 }
 
+.booking__form {
+    display: flex;
+}
+
 .booking__information {
+    margin-left: 40px;
     width: 530px;
     height: 663px;
     padding: 25px 30px 26px 30px;
+    background: #FFFFFF;
+    border: 1px solid #030303;
+    box-sizing: border-box;
 }
 
+.booking__first__row {
+    display: flex;
+    justify-content: space-between;
+}
 
+.overview {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    color: #272727;
+    margin-bottom: 2px;
+}
 
+.tour__to__louvre {
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: #740C11;
+    opacity: 0.9;
+}
 
+.ticket__information__date,
+.ticket__information__time {
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.ticket__information__exhibition {
+    display: flex;
+}
+
+.ticket__information__date p,
+.ticket__information__time p,
+.ticket__information__exhibition p{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    color: #030303;
+    margin-left: 15px;
+}
+
+.booking__second__row {
+    margin-top: 22px;
+    width: 470px;
+    height: 117px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.booking__second__row__ticket__type {
+    align-items: center;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #030303;
+}
+
+.left {
+    align-items: center;
+    display: flex;
+}
+
+.left p {
+    margin-left: 10px;
+}
+
+.booking__second__row__line {
+    width: 100%;
+    height: 2px;
+    background: #740C11;
+    margin-top: 9px;
+    margin-bottom: 10px;
+}
+
+.booking__second__row__total__price {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    color: #030303;
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking__third__row {
+    position: relative;
+    width: 360px;
+    height: 211px;
+    background: #BCBCBC;
+    margin-top: 10px;
+}
+
+.credit__card {
+    padding: 15px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.credit__card__front input {
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.credit__card__number {
+    margin-left: 0px;
+}
+
+.front__left__container, .expiration__date__container {
+    display: flex;
+    flex-direction: column;
+    width: 215px;
+}
+
+.card__number, .expiration__date__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 54px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.card__number p,
+.expiration__date__container p,
+.credit__cardholder__name p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #161615;
+    margin-bottom: 5px;
+}
+
+#credit__card__number {
+    background: #FFFFFF;
+    border: 0.5px solid #A4A4A3;
+    width: 215px;
+    height: 35px;
+}
+
+.expiration__date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.credit__card__day, .credit__card__year {
+    display: flex;
+}
+
+#credit__card__expiration__date {
+    width: 100px;
+    height: 35px;
+}
+
+.front__right__container {
+    margin-top: 19px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mastercard {
+    margin-top: 15px;
+}
+
+.credit__cardholder__name {
+    margin-left: 20px;
+    height: 54px;
+    width: 320px;
+}
+
+#cardholder__name {
+    width: 100%;
+    height: 35px;
+    background: #FFFFFF;
+    border: 0.567px solid #A4A4A3;
+}
+
+.credit__card__back {
+    position: absolute;
+    left: 30.67%;
+    top: 14.41%;
+    width: 360px;
+    height: 211px;
+}
+
+.credit__card__cvv,
+.align__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.credit__card__cvv {
+    align-items: flex-end;
+    width: 360px;
+    height: 211px;
+    background: #939393;
+}
+
+.align__right {
+    width: 110px;
+}
+
+.cvv__line {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 45px;
+    background: #161615;
+}
+
+.input__cvv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 111px;
+    justify-content: space-between;
+}
+
+.cvv__number {
+    width: 57px;
+    height: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #161615;
+}
+
+.cvv__info {
+    width: 55px;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #161615;
+}
+
+#cvv__input {
+    padding-left: 10px;
+    width: 75px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 0.5px solid #A4A4A3;
+}
+
+.book {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100px;
+    margin-left: 250px;
+}
+
+.book__button {
+    cursor: pointer;
+    width: 220px;
+    height: 45px;
+    background: #710707;
+    opacity: 0.9;
+    border: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: #FFFFFF;
+}

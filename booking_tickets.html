@@ -20,7 +20,10 @@
 <body>
     <div class="container">
         <div class="close__window">
-            <span class="close"></span>
+            <!-- <span class="close"></span> -->
+            <button class="close">
+                <a href="index.html"><img src="assets/img/booking-tickets/Close.svg" alt="close__icon" width="25" height="25"/></a>               
+            </button>
         </div>
 
         <div class="booking__wrapper">
@@ -33,88 +36,185 @@
 
                     </div>
 
-                    <div class="data__and__time">
-                        <input type="date" class="data" onfocus="(this.type='date')" placeholder="Date"/>
-                        <input type="time" class="time"/>
-                    </div>
-                    <div class="name">
-                        <img src="assets/img/booking-tickets/name.svg" alt="name__icon"/>
-                        <input class="infoPlaceholder" placeholder="Name" type="text"/>
-                    </div>
-
-                    <div class="email">
-                        <img src="assets/img/booking-tickets/email.svg" alt="mail__icon"/>
-                        <input class="infoPlaceholder" placeholder="E-mail" type="email"/>
-                    </div>
-
-                    <div class="phone">
-                        <img src="assets/img/booking-tickets/tel.svg" alt="phone__icon"/>
-                        <input class="infoPlaceholder" placeholder="Phone" type="number"/>
-                    </div>
-                     
-                    <div class="ticket__type">
-                        <img src="assets/img/booking-tickets/Vector.svg" alt="ticket__type__icon"/>
-                        <select class="select" placeholder="Ticket Type">
-                            <option value="" disabled selected>Select your ticket</option>
-                            <option value="Basic">Basic 18+</option>
-                            <option value="Senior">Senior 65+</option>
-                        </select>
-                    </div>
-
-                    <div class="select__tickets">
-                        <input id="entry__ticket" type="text" placeholder="Entry Ticket"/>
-                        <div class="select__tickets__line">
-                            
-                        </div>
-
-                        <div class="entry__basic">
-                            <span>Basic 18+ (20 €)</span>
-                            <div class="pay__ticket">
-                                <button class="minus"><p>-</p></button>
-                                <p class="ticket__counter">0</p>
-                                <button class="plus"><p>+</p></button>
+                    <div class="input__container">
+                        <div class="data__and__time">
+                            <div class="data">
+                                <img class="margin__icons" src="assets/img/booking-tickets/date (1).svg" alt="data__icon" width="15" height="15"/>
+                                <input type="date" class="data" onfocus="(this.type='date')" placeholder="Date"/>
+                            </div>
+        
+                            <div class="time">
+                                <img class="margin__icons" src="assets/img/booking-tickets/time (1).svg" alt="time" width="15" height="15"/>
+                                <input type="time" class="time"/>
                             </div>
                         </div>
-
-                        <div class="entry__senior">
-                            <span>Senior 65+ (10 €)</span>
-                            <div class="pay__ticket">
-                                <button class="minus"><p>-</p></button>
-                                <p class="ticket__counter">0</p>
-                                <button class="plus"><p>+</p></button>
+                        
+                        <div class="name">
+                            <img class="margin__icons" src="assets/img/booking-tickets/name.svg" alt="name__icon"/>
+                            <input class="infoPlaceholder" placeholder="Name" type="text"/>
+                        </div>
+    
+                        <div class="email">
+                            <img class="margin__icons" src="assets/img/booking-tickets/email.svg" alt="mail__icon"/>
+                            <input class="infoPlaceholder" placeholder="E-mail" type="email"/>
+                        </div>
+    
+                        <div class="phone">
+                            <img class="margin__icons" src="assets/img/booking-tickets/tel.svg" alt="phone__icon"/>
+                            <input class="infoPlaceholder" placeholder="Phone" type="number"/>
+                        </div>
+                         
+                        <div class="ticket__type">
+                            <img src="assets/img/booking-tickets/Vector.svg" alt="ticket__type__icon"/>
+                            <select class="select" placeholder="Ticket Type">
+                                <option value="" disabled selected>Select your ticket</option>
+                                <option value="Basic">Basic 18+</option>
+                                <option value="Senior">Senior 65+</option>
+                            </select>
+                        </div>
+    
+                        <div class="select__tickets">
+                            <input id="entry__ticket" type="text" placeholder="Entry Ticket"/>
+                            <div class="select__tickets__line">
+                                
+                            </div>
+    
+                            <div class="entry__basic">
+                                <span>Basic 18+ (20 €)</span>
+                                <div class="pay__ticket">
+                                    <button class="minus"><p>-</p></button>
+                                    <p class="ticket__counter">0</p>
+                                    <button class="plus"><p>+</p></button>
+                                </div>
+                            </div>
+    
+                            <div class="entry__senior">
+                                <span>Senior 65+ (10 €)</span>
+                                <div class="pay__ticket">
+                                    <button class="minus"><p>-</p></button>
+                                    <p class="ticket__counter">0</p>
+                                    <button class="plus"><p>+</p></button>
+                                </div>
                             </div>
                         </div>
                     </div>
-
                 </form>
-            </div>
 
-            <div class="booking__information">
-                <div class="booking__row">
-                    <div class="ticket__information">
-                        <p>Overview</p>
-                        <p>Tour to Louvre</p>
-    
-                        <div class="date">
-                            <img/>
-                            <p>Friday, August 19</p>
+                <div class="booking__information">
+                    <div class="booking__first__row">
+                        <div class="ticket__information">
+                            <p class="overview">Overview</p>
+                            <p class="tour__to__louvre">Tour to Louvre</p>
+        
+                            <div class="ticket__information__date">
+                                <img src="./assets/img/booking-tickets/date (1).svg" alt="date__icon" width="15" height="15"/>
+                                <p>Friday, August 19</p>
+                            </div>
+        
+                            <div class="ticket__information__time">
+                                <img src="./assets/img/booking-tickets/time (1).svg" alt="time__icon" width="15" height="15"/>
+                                <p>16 : 30</p>
+                            </div>
+        
+                            <div class="ticket__information__exhibition">
+                                <img src="./assets/img/booking-tickets/exhibition.svg" alt="exhibition__icon" width="15" height="15"/>
+                                <p>Temporary exhibition</p>
+                            </div>
                         </div>
     
-                        <div class="time">
-                            <img/>
-                            <p>16 : 30</p>
+                        <img src="assets/img/booking-tickets/Rectangle 4.png" alt="louvre" width="150" height="120"/>
+                    </div>
+
+                    <div class="booking__second__row">
+                        <div class="booking__second__row__ticket__type">
+                            <div class="left">
+                                <img src="assets/img/booking-tickets/Group 37.svg" alt="total__ticket" width="32" height="20"/>
+                                <p>Basic (20 €)</p>
+                            </div>
+                            <p>40 €</p>
                         </div>
-    
-                        <div class="exhibition">
-                            <img/>
-                            <p>Temporary exhibition</p>
+
+                        <div class="booking__second__row__ticket__type">
+                            <div class="left">
+                                <img src="assets/img/booking-tickets/Group 37.svg" alt="total__ticket" width="32" height="20"/>
+                                <p>Senior (10 €)</p>
+                            </div>
+                            <p>20 €</p>
+                        </div>
+
+                        <div class="booking__second__row__line">
+
+                        </div>
+
+                        <div class="booking__second__row__total__price">
+                            <p>Total:</p>
+                            <p>60 €</p>
                         </div>
                     </div>
 
-                    <img src="assets/img/booking-tickets/Rectangle 4.png" alt="louvre"/>
-                </div>
-                
-                
+                    <div class="booking__third__row">
+                        <div class="bla">
+                            <div class="credit__card__front">
+                                <form class="credit__card">
+                                    <div class="front__left__container">
+                                        <div class="card__number">
+                                            <p>Card number</p>
+                                            <input id="credit__card__number" type="number"/>
+                                        </div>
+                                        
+                                        <div class="expiration__date__container">
+                                            <p>Expiration__date</p>
+                                            <div class="expiration__date">
+                                                <div class="credit__card__day">
+                                                    <input id="credit__card__expiration__date" data="number"/>
+                                                </div>
+        
+                                                <div class="credit__card__year">
+                                                    <input id="credit__card__expiration__date" data="number"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="front__right__container">
+                                        <img src="assets/img/booking-tickets/credit-card/Visa.svg" alt="visa" width="56" height="16"/>
+                                        <img class="mastercard" src="assets/img/booking-tickets/credit-card/Mastercard.svg" alt="mastercard" width="53" height="32"/>
+                                    </div>
+                                </form>
+    
+                                <div class="credit__cardholder__name">
+                                    <p>Cardholder name</p>
+                                    <input id="cardholder__name" type="text"/>
+                                </div>
+                            </div> 
+                            
+                            <div class="credit__card__back">
+                                <form class="credit__card__cvv">
+                                    <div class="align__right">
+                                        <div class="cvv__line">
+    
+                                        </div>
+        
+                                        <div class="input__cvv">
+                                            <p class="cvv__number">CVC/CVV</p>
+                                            <input id="cvv__input" type="number"/>
+                                            <p class="cvv__info">The last 3 or 4 digits on backof the card</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+
+                        <div class="book">
+                            <button class="book__button">
+                                Book
+                            </button>
+                        </div>
+                    </div>
+                    
+                    
+                 </div>
             </div>
         </div>    
     </div>
