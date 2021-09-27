@@ -113,6 +113,12 @@ main {
     color: #FFFFFF;
 }
 
+.welcome__slider__arrows a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
 .welcome__button {
     position: absolute;
     bottom: 0;
@@ -125,6 +131,49 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+} */
+
+.mySlides {
+    display: none;
+}
+
+.dot {
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+}
+
+.dot:hover {
+    background: #9D8665;
+}
+
+.active {
+    background: #D2B183;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 
 .welcome__button:hover {
@@ -192,12 +241,6 @@ main {
     height: 16px;
 }
 
-.active__slide__pagination {   
-    width: 16px;
-    height: 16px;
-    background: #FFFFFF;
-}
-
 .welcome__slider__arrows {
     padding-right: 56px;
     width: 80px;
@@ -248,6 +291,11 @@ main {
     justify-content: space-between;
 }
 
+.tour__list:hover .tour__list__line {
+    width: 100%;
+}
+
+
 .tour__list {
     display: flex;
     flex-direction: column;
@@ -270,6 +318,13 @@ main {
     color: #000000;
 }
 
+.google__street {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 424px;
+}
+
 .tour__name:hover {
     cursor: pointer;
 }
@@ -279,6 +334,7 @@ main {
 }
 
 .tour__list__line {
+    transition: 1.2s;
     width: 300px;
     height: 2px;
     background: #710707;
@@ -430,14 +486,16 @@ main {
 
 .video__slider__container {
     display: flex;
+    align-items: center;
     width: 200px;
     height: 12px;
     justify-content: space-between;
 }
 
 .slider__left, .slider__right {
-    border: 0px;
+    cursor: pointer;
     background: transparent;
+    text-decoration: none;
 }
 
 .video__circle {
@@ -445,6 +503,10 @@ main {
     height: 12px;
     background: #999999;
     border-radius: 50%;
+}
+
+.video__circle:hover {
+    cursor: pointer;
 }
 
 /***************** MAIN__GALLERY Section ************/
@@ -714,9 +776,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: inline-block;
     position: absolute;
     content: '';
-    /* width: 18px;
-    height: 38px; */
-
     width: 1rem;
     height: 2px;
     background-color: #212121;
@@ -728,9 +787,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .number-input input[type=number] {
-    /* width: 12px;
-    height: 26px; */
-
     font-family: 'Roboto';
     font-style: normal;
     font-weight: bold;
@@ -1148,16 +1204,9 @@ footer {
 }
 
 input[type="date"], input[type="time"] {
+    width: 100%;
     border: 0px;
     height: 40px;
-}
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-inner-spin-button,
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
 }
 
 .data, .time, .name, .email, .phone, .ticket__type{
@@ -1167,22 +1216,34 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     box-sizing: border-box;
     width: 190px;
     height: 45px;
-    padding: 5px 15px;
+    padding-right: 5px;
 }
 
 ::-webkit-calendar-picker-indicator { 
-    background-image: url('../assets/img/booking-tickets/arrow.svg');
-}
-
-::-webkit-select-picker-indicator {
+    margin: 0px;
+    width: 17px;
+    height: 17px;
     background-image: url('../assets/img/booking-tickets/arrow.svg');
 }
 
 ::-webkit-datetime-edit-fields-wrapper {
-    display: none;
+    display: var(--zxc,none);
     background: transparent;
     border: none;
 }
+
+input:not(.has__value)::before {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 21px;
+    color: #030303;
+    content: attr(placeholder);
+}
+
+
 
 ::-webkit-datetime-edit-year-field,
 ::-webkit-datetime-edit-day-field,
@@ -1217,6 +1278,7 @@ input[type="date"], input[type="time"] {
 }
 
 input[type="text"], input[type="email"], input[type="number"] {
+    width: 100%;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-size: 18px;
@@ -1232,7 +1294,16 @@ input[type="text"], input[type="email"], input[type="number"] {
     width: 100%;
 }
 
+.ticket__type {
+    position: relative;
+}
+
 .select {
+    z-index: 1;
+    width: 100%;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     padding: 0px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -1241,8 +1312,12 @@ input[type="text"], input[type="email"], input[type="number"] {
     display: flex;
     align-items: center;
     color: #030303;
-    margin-left: 15px;
+    justify-content: space-between;
     border: 0px;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 .select__tickets {
@@ -1276,7 +1351,6 @@ input:focus, select:focus {
     line-height: 21px;
     display: flex;
     align-items: center;
-
     color: #030303;
 }
 
@@ -1325,7 +1399,7 @@ input:focus, select:focus {
 }
 
 .margin__icons {
-    margin-right: 15px;
+    padding: 15px;
 }
 
 .entry__basic {
@@ -1348,6 +1422,12 @@ input:focus, select:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.select__arrow {
+    position: absolute;
+    right: 14px;
+    top: 14px;
 }
 
 .pay__ticket {
@@ -1502,6 +1582,14 @@ input:focus, select:focus {
     justify-content: space-between;
 }
 
+.credit__card__front {
+    width: 360px;
+    height: 211px;
+    background: #BCBCBC;
+    position: relative;
+    z-index: 1;
+}
+
 .credit__card__front input {
     font-size: 14px;
     padding-left: 10px;
@@ -1541,7 +1629,7 @@ input:focus, select:focus {
 #credit__card__number {
     background: #FFFFFF;
     border: 0.5px solid #A4A4A3;
-    width: 215px;
+    width: 205px;
     height: 35px;
 }
 
@@ -1551,11 +1639,12 @@ input:focus, select:focus {
 }
 
 .credit__card__day, .credit__card__year {
+    width: 100px;
     display: flex;
 }
 
 #credit__card__expiration__date {
-    width: 100px;
+    width: 90px;
     height: 35px;
 }
 
@@ -1576,7 +1665,7 @@ input:focus, select:focus {
 }
 
 #cardholder__name {
-    width: 100%;
+    width: 308px;
     height: 35px;
     background: #FFFFFF;
     border: 0.567px solid #A4A4A3;
@@ -1654,7 +1743,7 @@ input:focus, select:focus {
 }
 
 .book {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     align-items: flex-end;
     width: 100%;

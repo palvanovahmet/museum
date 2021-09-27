@@ -40,12 +40,12 @@
                         <div class="data__and__time">
                             <div class="data">
                                 <img class="margin__icons" src="assets/img/booking-tickets/date (1).svg" alt="data__icon" width="15" height="15"/>
-                                <input type="date" class="data" onfocus="(this.type='date')" placeholder="Date"/>
+                                <input type="date" class="input__data" placeholder="Date"/>
                             </div>
         
                             <div class="time">
                                 <img class="margin__icons" src="assets/img/booking-tickets/time (1).svg" alt="time" width="15" height="15"/>
-                                <input type="time" class="time"/>
+                                <input placeholder="Time" type="time" class="input__time"/>
                             </div>
                         </div>
                         
@@ -65,7 +65,8 @@
                         </div>
                          
                         <div class="ticket__type">
-                            <img src="assets/img/booking-tickets/Vector.svg" alt="ticket__type__icon"/>
+                            <img class="margin__icons" src="assets/img/booking-tickets/Vector.svg" alt="ticket__type__icon"/>
+                            <img class="select__arrow" src="assets/img/booking-tickets/arrow.svg" alt="arrow__icon"/>
                             <select class="select" placeholder="Ticket Type">
                                 <option value="" disabled selected>Select your ticket</option>
                                 <option value="Basic">Basic 18+</option>
@@ -153,7 +154,7 @@
                     </div>
 
                     <div class="booking__third__row">
-                        <div class="bla">
+                        <div class="booking__container">
                             <div class="credit__card__front">
                                 <form class="credit__card">
                                     <div class="front__left__container">
@@ -218,5 +219,18 @@
             </div>
         </div>    
     </div>
+
+    <script>
+        let cb = (event) => {
+            event.target.style.setProperty('--zxc', 'block');
+
+            if(event.target.value != '') {
+                event.target.classList.add('has__value');
+            }
+        }
+
+        document.querySelector('.input__data').addEventListener('change', cb);
+        document.querySelector('.input__time').addEventListener('change', cb);
+    </script>
 </body>
 </html>
