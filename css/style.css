@@ -74,6 +74,7 @@ main {
 }
 
 .welcome__container {
+    position: relative;
     padding-top: 32px;
     display: flex;
     justify-content: space-between;
@@ -195,7 +196,7 @@ main {
 
 .welcome__picture {
     position: absolute;
-    right: 250px;
+    right: 0px;
     height: 810px;
 }
 
@@ -1769,4 +1770,94 @@ input:focus, select:focus {
     font-size: 22px;
     line-height: 26px;
     color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1024px){
+   
+    main, header, footer {
+        max-width: 100%;
+    }
+
+    .wrapper {
+        width: 90%;
+   }  
+
+   .Welcome, .Visiting, .Explore, .Video, .Gallery, .Tickets, .Contacts {
+       max-width: 100%;
+   }
+
+   .welcome__picture {
+        width: 70%; 
+    }
+
+    .welcome__picture img {
+        width: 100%;
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .tour__list {
+        width: 100%;
+        flex-direction: unset;
+        width: calc( ( 100% - 80px ) / 3 );
+        flex-wrap: wrap;
+    }
+
+    .tour__list img {
+        width: 100%;
+        height: auto;
+    }
+
+    .explore__container {
+        width: 100%;
+    }
+
+    .explore__left {
+        width: 45%;
+    }
+
+    .explore__line {
+        width: 100%;
+    }
+
+    .explore__information .row {
+        width: 100%;
+    }
+
+    .explore__right {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+
+    .explore__right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .first__column, .second__column, .third__column {
+        width: calc( ( 100% - 45px ) / 3 );
+        flex-wrap: wrap;
+    }
+
+    .Gallery {
+        height: 1540px;
+    }
+
+    .parallax {
+        width: 100%;
+    }
+
+    .image__parallax {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact__coordination {
+        width: 68%;
+    }
 }
