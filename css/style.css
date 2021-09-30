@@ -864,9 +864,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .parallax {
-    margin-top: 75px;
-    width: 1920px;
+    width: 100%;
     height: 400px;
+    background-image: url(../assets/img/parallax.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .image__parallax {
@@ -1772,7 +1774,7 @@ input:focus, select:focus {
     color: #FFFFFF;
 }
 
-@media only screen and (max-width: 1920px) and (min-width: 1024px){
+@media only screen and (max-width: 1920px) and (min-width: 1320px){
    
     main, header, footer {
         max-width: 100%;
@@ -1786,9 +1788,10 @@ input:focus, select:focus {
        max-width: 100%;
    }
 
-   .welcome__picture {
-        width: 70%; 
-    }
+   header {
+    min-width: 1024px;
+    min-height: 130px;
+   }
 
     .welcome__picture img {
         width: 100%;
@@ -1803,7 +1806,7 @@ input:focus, select:focus {
     .tour__list {
         width: 100%;
         flex-direction: unset;
-        width: calc( ( 100% - 80px ) / 3 );
+        width: calc(( 100% - 80px ) / 3);
         flex-wrap: wrap;
     }
 
@@ -1859,5 +1862,292 @@ input:focus, select:focus {
 
     .contact__coordination {
         width: 68%;
+    }
+
+    .video__container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* video {
+        width: 100%;
+        height: auto;
+    } */
+
+    .main__video {
+        width: 100%;
+    }
+
+    .video__container video {
+        width: 100%;
+    }
+
+    .video__information {
+        display: none;
+    }
+
+    .recomended__videos {
+        width: calc( ( 100% - 41px ) / 3 );
+        flex-wrap: wrap;
+    }
+
+    .recomended__videos video {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1320px) and (min-width: 1024px){
+    main, header, footer {
+        max-width: 100%;
+    }
+
+    .wrapper {
+        width: 96%;
+   }  
+
+   .Welcome, .Visiting, .Explore, .Video, .Gallery, .Tickets, .Contacts {
+       max-width: 100%;
+   }
+
+   .Welcome {
+    max-height: 585px;
+   }
+
+   .welcome__container {
+    padding-top: 0px;   
+   }
+
+   .welcome__offer {
+    padding-top: 50px;
+   }
+
+   header {
+    min-width: 1024px;
+    min-height: 130px;
+   }
+
+    .welcome__picture {
+        display: none;
+        height: 585px;
+    }
+
+    .offer__title {
+        font-size: 50px;
+        line-height: 90px;
+    }
+
+    .offer__info {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    /* img {
+        width: 100%;
+        height: auto;
+    } */
+
+    .tour__list {
+        width: 100%;
+        flex-direction: unset;
+        width: calc(( 100% - 80px ) / 3);
+        flex-wrap: wrap;
+    }
+
+    .tour__list img {
+        width: 100%;
+        height: auto;
+    }
+
+    .Explore {
+       height: 100%;
+    }
+    .explore__container {
+        width: 100%;
+    }
+
+    .explore__left {
+        width: 45%;
+    }
+
+    .explore__line {
+        width: 100%;
+    }
+
+    .explore__information .row {
+        width: 100%;
+    }
+
+    .explore__right {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+
+    /* .explore__right img {
+        width: 100%;
+        height: auto;
+    } */
+
+    .first__column, .second__column, .third__column {
+        width: calc( ( 100% - 45px ) / 3 );
+        flex-wrap: wrap;
+    }
+
+    .Gallery {
+        height: 1540px;
+    }
+
+    .gallery__images img {
+        width: 100%;
+        height: auto;
+    }
+
+    .parallax {
+        width: 100%;
+    }
+
+    .image__parallax {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact__coordination {
+        width: 68%;
+    }
+
+    .video__container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* video {
+        width: 100%;
+        height: auto;
+    } */
+
+    .main__video {
+        width: 100%;
+    }
+
+    .video__container video {
+        width: 100%;
+    }
+
+    .video__information {
+        display: none;
+    }
+
+    .recomended__videos {
+        width: calc( ( 100% - 41px ) / 3 );
+        flex-wrap: wrap;
+    }
+
+    .recomended__videos video {
+        width: 100%;
+    }
+
+    .visiting__menu {
+        justify-content: space-around;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 330px);
+        grid-template-rows: repeat(3, 405px);
+        height: auto;
+    }
+
+    .row__menu, .tour__list {
+        display: contents;
+    }
+
+    .google__street {
+        height: 345px;
+    }
+
+    .tour__name {
+        font-size: 28px;
+        line-height: 31px;
+        letter-spacing: 3px;
+    }
+
+    .tour__type {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .Visiting h2 {
+        padding-top: 60px;
+        font-size: 50px;
+        line-height: 75px;
+    }
+
+    .visiting__line {
+        margin: 20px 0px 60px 0px
+    }
+
+    .Visiting {
+        height: auto;
+    }
+
+    .explore__container {
+        padding-top: 60px;
+        flex-direction: column;
+    }
+
+    .explore__left {
+        width: 100%;
+        display: flex;
+    }
+
+    .explore__title {
+        font-size: 50px;
+        line-height: 75px;
+        letter-spacing: 5px;
+        margin-bottom: 20px;
+    }
+
+    .explore__line {
+        margin-bottom: 60px;
+    }
+
+    .explore__information .row {
+        height: auto;
+        padding: 0px;
+    }
+    .row:last-child {
+        display: none;
+    }
+
+    .explore__right {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer__information {
+        margin-left: 45px;
+        width: 300px;
+    }
+
+    .tickets__title h2 {
+        padding-top: 60px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 75px;
+        letter-spacing: 5px;
+        color: #9D8665;
+    }
+
+    .tickets__line {
+        margin: 20px 0px 60px 0px;
+    }
+    .contact__coordination img {
+        width: 100%;
+        height: auto;
     }
 }
