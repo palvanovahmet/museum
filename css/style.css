@@ -602,6 +602,7 @@ main {
 }
 
 .tickets__container {
+    margin-bottom: 75px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -907,9 +908,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .contact__container {
+    margin-bottom: 75px;
     display: flex;
     justify-content: space-between;
 }
+
 .contact__information {
     height: 218px;
     width: 292px;
@@ -1798,10 +1801,10 @@ input:focus, select:focus {
         height: auto;
     }
 
-    img {
+    /* img {
         width: 100%;
         height: auto;
-    }
+    } */
 
     .tour__list {
         width: 100%;
@@ -1888,6 +1891,10 @@ input:focus, select:focus {
         display: none;
     }
 
+    .tickets__line {
+        width: 100%;
+    }
+
     .recomended__videos {
         width: calc( ( 100% - 41px ) / 3 );
         flex-wrap: wrap;
@@ -1895,6 +1902,10 @@ input:focus, select:focus {
 
     .recomended__videos video {
         width: 100%;
+    }
+
+    .tickets__container {
+        margin-bottom: 60px;
     }
 }
 
@@ -1905,28 +1916,42 @@ input:focus, select:focus {
 
     .wrapper {
         width: 96%;
-   }  
+    }  
 
-   .Welcome, .Visiting, .Explore, .Video, .Gallery, .Tickets, .Contacts {
-       max-width: 100%;
-   }
+    .Welcome, .Visiting, .Explore, .Video, .Gallery, .Tickets, .Contacts {
+        max-width: 100%;
+    }
 
-   .Welcome {
-    max-height: 585px;
-   }
+    .Welcome {
+        max-height: 585px;
+    }
 
-   .welcome__container {
-    padding-top: 0px;   
-   }
+    .welcome__offer {
+        height: 360px;
+    }
 
-   .welcome__offer {
-    padding-top: 50px;
-   }
+    .welcome__container {
+        padding-top: 0px;   
+    }
 
-   header {
-    min-width: 1024px;
-    min-height: 130px;
-   }
+    .welcome__button {
+        width: 300px;
+        height: 60px;
+    }
+
+    .welcome__button a{
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .welcome__offer {
+        padding-top: 50px;
+    }
+
+    header {
+        min-width: 1024px;
+        min-height: 130px;
+    }
 
     .welcome__picture {
         display: none;
@@ -1943,11 +1968,6 @@ input:focus, select:focus {
         line-height: 28px;
     }
 
-    /* img {
-        width: 100%;
-        height: auto;
-    } */
-
     .tour__list {
         width: 100%;
         flex-direction: unset;
@@ -1963,8 +1983,10 @@ input:focus, select:focus {
     .Explore {
        height: 100%;
     }
+    
     .explore__container {
         width: 100%;
+        padding: 60px 0px 60px 0px;
     }
 
     .explore__left {
@@ -1980,6 +2002,7 @@ input:focus, select:focus {
     }
 
     .explore__right {
+        padding-top: 57px;
         display: flex;
         align-items: center;
         width: 50%;
@@ -2033,12 +2056,28 @@ input:focus, select:focus {
         width: 100%;
     }
 
+    .video__container {
+        margin-top: 40px;
+    }
+
     .video__container video {
+        height: auto;
         width: 100%;
     }
 
     .video__information {
         display: none;
+    }
+
+    .video__journey__header {
+        margin-top: 60px;
+    }
+
+    .video__title h2 {
+        height: auto;
+        font-size: 50px;
+        line-height: 75px;
+        letter-spacing: 5px;
     }
 
     .recomended__videos {
@@ -2048,6 +2087,14 @@ input:focus, select:focus {
 
     .recomended__videos video {
         width: 100%;
+    }
+
+    .Video {
+        height: auto;
+    }
+
+    .video__slider {
+        margin-bottom: 60px;
     }
 
     .visiting__menu {
@@ -2117,6 +2164,12 @@ input:focus, select:focus {
         height: auto;
         padding: 0px;
     }
+    .row {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
     .row:last-child {
         display: none;
     }
@@ -2144,10 +2197,399 @@ input:focus, select:focus {
     }
 
     .tickets__line {
+        width: 100%;
         margin: 20px 0px 60px 0px;
     }
+
+    .form__left {
+        display: none;
+    }
+
+    .tickets__picture {
+        width: 100%;
+    }
+
+    .form__right {
+        align-items: unset;
+    }
+
     .contact__coordination img {
         width: 100%;
         height: auto;
     }
+
+    .tickets__picture img {
+        width: auto;
+        height: auto;
+    }
+
+    .contact__title {
+        margin-top: 60px;
+        font-size: 50px;
+        height: auto;
+        line-height: 75px;
+    }
+
+    .contact__line {
+        margin: 20px 0px 60px 0px;
+    }
+
+    .Contacts {
+        height: auto;
+    }
+
+    .contact__container {
+        margin-bottom: 62px;
+    }
+
+    .contact__information {
+        height: 190px;
+    }
+
+    .contact__information__title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .contact__menu {
+        margin-top: 30px;
+    }
+
+    .contact__coordination img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact__list {
+        padding-bottom: 15px;
+        font-size: 20px;
+        line-height: 23px;
+    }
 }
+
+@media only screen and (max-width: 1024px) and (min-width: 768px){
+    main, header, footer {
+        max-width: 100%;
+    }
+
+    .wrapper {
+        width: 96%;
+    }  
+
+    .Welcome, .Visiting, .Explore, .Video, .Gallery, .Tickets, .Contacts {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header__right {
+        display: none;
+    }
+
+    .Welcome {
+        height: auto;
+        min-height: 861px
+    }
+
+    .welcome__container {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .welcome__button {
+        position: unset;
+        display: none;
+    }
+
+    .welcome__offer {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: unset;
+        height: 165px;
+        padding-top: 0px;
+    }
+
+    .offer__title {
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    .offer__info {
+        width: auto;
+        text-align: center;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 2px;
+    }
+
+    .welcome__picture {
+        display: none;
+    }
+
+    .Visiting h2 {
+        padding-top: 40px;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+
+    .visiting__line {
+        margin: 20px 0px 40px 0px;   
+    }
+
+    .visiting__menu {
+        justify-content: space-around;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: repeat(3, 350px);
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .row__menu, .tour__list {
+        display: contents;
+    }
+
+    .tour__list img {
+        width: 100%;
+        height: auto;
+    }
+
+    .google__street {
+        height: 301px;
+    }
+
+    .tour__list__line {
+        width: 55%;
+    }
+
+    .tour__name {
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 3px;
+    }
+
+    .explore__container {
+        padding: 40px 0px 40px 0px;
+        flex-direction: column;
+    }
+
+
+    .explore__title {
+        margin-bottom: 0px;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+
+    .explore__line {
+        width: 100%;
+        margin: 20px 0px 40px 0px;
+    }
+
+    .explore__right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .explore__information {
+        display: none;
+    }
+
+    .video__title h2 {
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+
+    .video__information {
+        display: none;
+    }
+
+    .video__journey__header {
+        margin-top: 40px;
+        height: auto;
+    }
+
+    .video__container {
+        margin-top: 20px;
+    }
+
+    .video__container {
+        width: 100%;
+        height: auto;
+    }
+
+    .video__container video {
+        width: 100%;
+        height: auto;
+    }
+
+    .video__recomendation {
+        margin-top: 20px;
+    }
+
+    .recomended__videos {
+        width: calc( ( 100% - 20px ) / 2 );
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .recomended__videos:last-child {
+        display: none;
+    }
+
+    .recomended__videos video {
+        width: 100%;
+        height: auto;
+    }
+
+    .Video {
+        height: auto;
+    }
+
+    .video__slider {
+        margin-top: 20px;
+        margin-bottom: 80px;
+    }
+
+    .first__column, .second__column {
+        width: calc( ( 100% - 24px ) / 2 );
+        flex-wrap: wrap;
+    }
+
+    .third__column {
+        display: none;
+    }
+
+    .Gallery {
+        height: 1220px;
+    }
+    .tickets__title h2 {
+        height: auto;
+        padding-top: 40px;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+
+    .tickets__line {
+        margin: 20px 0px 40px 0px;
+    }
+
+    .form__left {
+        display: none;
+    }
+
+    .tickets__picture {
+        width: 100%;
+    }
+
+    .form__right {
+        align-items: unset;
+    }
+
+    .tickets__container {
+        margin-bottom: 40px;
+    }
+
+    .tickets__picture img{
+        max-width: 444px;
+        max-height: 340px;
+        width: 100%;
+        height: auto;
+    }
+
+    .tickets__form {
+        width: auto;
+    }
+
+    .parallax {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contact__title {
+        height: auto;
+        margin-top: 40px;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 5px;
+    }
+
+    .contact__line {
+        margin: 20px 0px 40px 0px;
+    }
+
+    .contact__container {
+        flex-direction: column;
+        margin-bottom: 67px;
+    }
+
+    .contact__information__title {
+        font-weight: 500;
+        height: auto;
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .contact__menu {
+        margin-top: 40px;
+    }
+
+    .contact__list {
+        font-size: 18px;
+        line-height: 21px;
+        padding-bottom: 15px;
+    }
+
+    .contact__information {
+        height: 179px;
+        margin-bottom: 40px;
+    }
+
+    .contact__coordination img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        padding-right: 90px;
+        margin-top: 57px;
+    }
+
+    .footer__links {
+        margin-top: 50px;
+        justify-content: flex-end;
+        height: auto;
+        width: 100%;
+    }
+
+    .footer__information {
+        width: 340px;
+        height: 121px;
+        margin-left: 99px;
+    }
+
+    .footer__list__links {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 2px;
+    }
+
+    .social__links {
+        margin-right: 25px;
+    }
+
+    .social__links:last-child {
+        margin-right: 0px;
+    }
+
+}   
+
