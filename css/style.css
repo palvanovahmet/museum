@@ -2301,6 +2301,32 @@ input:focus, select:focus {
         display: none;
     }
 
+    .welcome__picture {
+        height: auto;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: unset;
+    }
+    
+    .welcome__picture img {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome__slider {
+        margin-top: 30px;
+        width: 401px;
+        height: 40px;
+        position: unset;
+        margin-bottom: 30px;
+    }
+
+    .welcome__slide__num, .welcome__slider__arrows {
+        padding: 0px;
+    }
+
     .welcome__offer {
         position: unset;
         display: flex;
@@ -2324,10 +2350,6 @@ input:focus, select:focus {
         font-size: 20px;
         line-height: 23px;
         letter-spacing: 2px;
-    }
-
-    .welcome__picture {
-        display: none;
     }
 
     .Visiting h2 {
@@ -2470,6 +2492,12 @@ input:focus, select:focus {
     .Gallery {
         height: 1220px;
     }
+
+    .first__column img, .second__column img {
+        width: 100%;
+        height: auto;
+    }
+
     .tickets__title h2 {
         height: auto;
         padding-top: 40px;
@@ -2577,6 +2605,10 @@ input:focus, select:focus {
         margin-left: 99px;
     }
 
+    .footer__line {
+        margin: 40px 0px 40px 0px;
+    }
+
     .footer__list__links {
         font-size: 18px;
         line-height: 21px;
@@ -2593,3 +2625,494 @@ input:focus, select:focus {
 
 }   
 
+@media only screen and (max-width: 768px) and (min-width: 420px){
+    main, header, footer {
+        max-width: 100%;
+    }
+
+    .wrapper {
+        width: 90%;
+    }  
+
+    .Welcome, .Visiting, .Explore, .Video, .Gallery, .Tickets, .Contacts {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header__left img{
+        width: 131px;
+        height: 20px;
+    }
+
+    .header__right {
+        display: none;
+    }
+
+    .Welcome {
+        height: auto;
+        min-height: 544px
+    }
+
+    .welcome__container {
+        padding-top: 0px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .welcome__button {
+        position: unset;
+        display: none;
+    }
+
+    .welcome__picture {
+        height: auto;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: unset;
+    }
+    
+    .welcome__picture img {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome__slider {
+        margin-top: 20px;
+        width: 230px;
+        height: 40px;
+        position: unset;
+        margin-bottom: 20px;
+    }
+
+    .dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .welcome__slide__num p{
+        padding-right: 5px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+
+    .welcome__slide__num, .welcome__slider__arrows {
+        padding: 0px;
+    }
+
+    .welcome__carousel__pagination {
+        margin: 0px 25px 0px 20px;
+    }
+
+    .left__arrow {
+        margin-right: 15px;
+    }
+
+    .welcome__slider__arrows img{
+        width: 20px;
+        height: 8px;
+    }
+
+    .welcome__offer {
+        position: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: unset;
+        height: 124px;
+        padding-top: 0px;
+    }
+
+    .offer__title {
+        font-size: 28px;
+        line-height: 40px;
+        text-align: center;
+        letter-spacing: 5px;
+    }
+
+    .offer__info {
+        width: auto;
+        text-align: center;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+    }
+
+    .Visiting {
+        height: 2153px;
+    }
+
+    .google__street {
+        height: 295px;
+    }
+
+    .Visiting h2 {
+        height: auto;
+        padding-top: 40px;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+    }
+
+    .visiting__line {
+        margin: 20px 0px 40px 0px;
+    }
+
+    .visiting__menu {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .row__menu {
+        height: auto;
+        display: grid;
+        grid-template-rows: 335px 335px 335px;
+    }
+
+    .tour__list {
+        align-items: center;
+    }
+
+    .tour__name {
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 5px;
+    }
+
+    .tour__list__line {
+        width: 53%;
+    }
+
+    .tour__type, .tour__place {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .tour__list img {
+        width: 280px;
+        height: 180px;
+    }
+
+    .explore__title {
+        margin-bottom: 0px;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+    }
+
+    .explore__line {
+        margin: 20px 0px 40px 0px;
+    }
+
+    .explore__information {
+        display: none;
+    }
+
+    .explore__container {
+        flex-direction: column;
+        padding: 40px 0px 40px 0px;
+    }
+
+    .explore__right {
+        width: 100%;
+        height: 368px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .explore__right img {
+        width: 100%;
+        height: 368px;
+    }
+
+    .video__title h2 {
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+    }
+
+    .video__journey__header {
+        height: auto;
+        margin-top: 36px;
+    }
+
+    .video__information {
+        display: none;
+    }
+
+    .video__container {
+        margin-top: 20px;
+    }
+
+    .video__container {
+        width: 100%;
+        height: auto;
+    }
+
+    .video__container video {
+        width: 100%;
+        height: auto;
+    }
+
+    .video__recomendation {
+        margin-top: 40px;
+    }
+
+    .recomended__videos {
+        width: calc( ( 100% - 20px ) / 2 );
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .recomended__videos:last-child {
+        display: none;
+    }
+
+    .recomended__videos video {
+        width: 100%;
+        height: auto;
+    }
+
+    .Video {
+        height: auto;
+    }
+
+    .video__slider {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 100%;
+        height: 8px;
+    }
+
+    .slider__left, .slider__right {
+        display: flex;
+        align-items: center;
+    }
+
+    .slider__left img, .slider__right img {
+        width: 7px;
+        height: 8px;
+    }
+
+    .video__circle {
+        width: 8px;
+        height: 8px;
+    }
+
+    .Gallery {
+        height: 757px;
+    }
+
+    .gallery__title h2 {
+        height: auto;
+        padding-top: 40px;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+    }
+
+    .gallery__images {
+        margin-top: 40px;
+    }
+
+    .first__column, .second__column {
+        margin-top: 0px;
+        width: calc( ( 100% - 24px ) / 2 );
+        flex-wrap: wrap;
+    }
+
+    .first__column img, .second__column img {
+        width: 100%;
+        height: auto;
+    }
+
+    .third__column {
+        display: none;
+    }
+
+    .tickets__title h2 {
+        height: auto;
+        padding-top: 40px;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+    }
+
+    .tickets__line {
+        margin: 20px 0px 40px 0px;
+    }
+
+    .tickets__container {
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+
+    .tickets__picture {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tickets__picture img {
+        width: 380px;
+        height: 160px;
+    }
+
+    .form__left {
+        display: none;
+    }
+
+    .tickets__form {
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    .right__title {
+        margin-bottom: 20px;
+    }
+
+    .number-input {
+        justify-content: space-between;
+        width: 175px;
+        height: 50px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+    
+    .number-input input[type=number] {
+        height: auto;
+    }
+
+    .price__container {
+        margin-top: 20px;
+    }
+
+    .button__buy {
+        margin-top: 40px;
+    }
+
+    .form__right {
+        height: auto;
+        align-items: center;
+        width: 100%;
+    }
+
+    .parallax {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .contact__title {
+        margin-top: 40px;
+        height: auto;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: 5px;
+    }
+
+    .contact__line {
+        margin: 20px 0px 40px 0px;
+    }
+
+    .contact__container {
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .contact__information__title {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .contact__information {
+        margin-bottom: 40px;
+        height: 165px;
+    }
+
+    .contact__coordination {
+        width: 100%;
+    }
+
+    .contact__coordination img {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact__list {
+        font-size: 16px;
+        line-height: 19px;
+        padding-bottom: 15px;
+    }
+
+    .contact__menu {
+        margin-top: 40px;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    .footer__container {
+        margin-top: 40px;
+    }
+
+    .footer__container, .footer__options {
+        flex-direction: column;
+    }
+
+    .footer__brand__name {
+        width: 131px;
+        height: auto;
+    }
+
+    .footer__brand__name img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer__information {
+        margin-top: 40px;
+        margin-left: 0px;
+    }
+
+    .footer__list__links {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+    }
+
+    .footer__links {
+        margin-top: 40px;
+        height: auto;
+        width: 100%;
+        height: 48px;
+        justify-content: center;
+    }
+
+    .social__links {
+        margin-right: 5px;
+    }
+
+    .social__links:last-child {
+        margin-right: 0px;
+    }
+
+    .footer__line {
+        margin: 40px 0px 40px 0px;
+    }
+
+    .footer__rs__school {
+        display: none;
+    }
+
+    .github__links {
+        margin-bottom: 40px;
+    }
+}
