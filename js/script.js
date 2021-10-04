@@ -49,3 +49,34 @@ next.addEventListener('click', () => {
 //      currentSlide(index);
 //   });  
 // }
+
+let burgerMenu = document.querySelector('.burger__menu');
+let burgerMenuLines = document.querySelector('.burger__menu__lines');
+let adaptiveMenu = document.querySelector('.welcome__adaptive__menu');
+let menuLinks = document.querySelector('.welcome__menu__links');
+let hideWelcomeOffer = document.querySelector('.welcome__offer');
+
+burgerMenu.onclick = openBurgerMenu;
+menuLinks.onclink = closeBurgerMenu;
+
+function openBurgerMenu(e){
+  burgerMenu.onclick = null;
+  if (e.target == burgerMenuLines || e.target == burgerMenu){
+      burgerMenuLines.classList.toggle("burger__menu__lines__active");
+      hideWelcomeOffer.classList.toggle("ninja");
+      adaptiveMenu.classList.toggle("burger__active");
+  }
+  
+
+  setTimeout(function(){
+    burgerMenu.onclick = openBurgerMenu;
+  },200);
+}
+
+function closeBurgerMenu(){  
+  burgerMenuLines.classList.toggle("burger__menu__lines__active");
+  hideWelcomeOffer.classList.toggle("ninja");
+  adaptiveMenu.classList.toggle("burger__active");
+}
+
+

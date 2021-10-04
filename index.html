@@ -27,7 +27,10 @@
                 </div>
 
                 <div class="header__right">
-                    <nav>
+                    <a class="burger__menu" href="#">
+                        <span class="burger__menu__lines burger__menu__lines__active"></span>
+                    </a>
+                    <nav class=header__nav>
                         <ul class="header__menu">
                             <li class="menu__list"><a href="#visiting" class="menu__links">Visiting</a></li>
                             <li class="menu__list"><a href="#explore" class="menu__links">Explore</a></li>
@@ -46,7 +49,58 @@
         <section class="Welcome">
             <div class="wrapper">
                 <div class="welcome__container">
-                    <div class="welcome__offer">
+                    <div class="welcome__adaptive__menu burger__active">
+                       
+                            <ul class="welcome__menu__links">
+                            <li onclick="closeBurgerMenu()"><a href="#visiting">Visiting
+                                <img src="assets/img/welcome-slider/arrow.svg" alt="arrow.svg"/></a>
+                            </li>
+                            <li onclick="closeBurgerMenu()"><a href="#explore">Explore
+                                <img src="assets/img/welcome-slider/arrow.svg" alt="arrow.svg"/></a>
+                            </li>
+                            <li onclick="closeBurgerMenu()"><a href="#video">Video
+                                <img src="assets/img/welcome-slider/arrow.svg" alt="arrow.svg"/></a>
+                            </li>
+                            <li onclick="closeBurgerMenu()"><a href="#gallery">Gallery
+                                <img src="assets/img/welcome-slider/arrow.svg" alt="arrow.svg"/></a>
+                            </li>
+                            <li onclick="closeBurgerMenu()"><a href="#tickets">Tickets
+                                <img src="assets/img/welcome-slider/arrow.svg" alt="arrow.svg"/></a>
+                            </li>
+                            <li onclick="closeBurgerMenu()"><a href="#contacts">Contacts
+                                <img src="assets/img/welcome-slider/arrow.svg" alt="arrow.svg"/></a>
+                            </li>
+                            </ul>
+                        
+
+                        <div class="welcome__adaptive__pictures">
+                            <div class="picture__one"></div>
+                            <div class="picture__two"></div>
+                            <div class="picture__three"></div>
+                        </div>
+
+                        <hr class="adaptive__menu__hr"/>
+
+                        <ul class="social__links__menu">
+                            <li class="social__link__menu construct">
+                                <img src="assets/img/footer/youtube.svg" alt="youtube.svg"/>
+                            </li>
+                            <li class="social__link__menu construct">
+                                <img src="assets/img/footer/instagram.svg" alt="instagram.svg"/>
+                            </li>
+                            <li class="social__link__menu construct">
+                                <img src="assets/img/footer/facebook.svg" alt="facebook.svg"/>
+                            </li>
+                            <li class="social__link__menu construct">
+                                <img src="assets/img/footer/twitter.svg" alt="twitter.svg"/>
+                            </li>
+                            <li class="social__link__menu construct">
+                                <img src="assets/img/footer/printerest.svg" alt="printerest.svg"/>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="welcome__offer ninja">
                         <h1 class="offer__title">Welcome <br> to the louvre</h1>
                         <h2 class="offer__info">From the castle to the museum</h2>
                         <button class="welcome__button">
@@ -326,10 +380,10 @@
                         <img class="gallery__pictures" src="assets/img/galery/galery15.jpg" alt="art-picture"/>
                         <img src="assets/img/galery/galery12.jpg" alt="art-picture"/>
                     </div>
+                </div>
 
-                    <div class="gallery__background__gradient">
+                <div class="gallery__background__gradient">
 
-                    </div>
                 </div>
             </div>
         </section>
@@ -458,17 +512,17 @@
                     <div class="footer__information">
                         <div class="footer__column">
                             <ul class="footer__menu">
-                                <li class="footer__list"><a class="footer__list__links" href="#visiting">Visiting</a></li>
-                                <li class="footer__list"><a class="footer__list__links" href="#explore">Explore</a></li>
-                                <li class="footer__list"><a class="footer__list__links" href="#video">Video</a></li>
+                                <li class="footer__list item__1"><a class="footer__list__links" href="#visiting">Visiting</a></li>
+                                <li class="footer__list item__2"><a class="footer__list__links" href="#explore">Explore</a></li>
+                                <li class="footer__list item__3"><a class="footer__list__links" href="#video">Video</a></li>
                             </ul>
                         </div>
     
                         <div class="footer__column">
                             <ul class="footer__menu">
-                                <li class="footer__list"><a class="footer__list__links" href="#gallery">Gallery</a></li>
-                                <li class="footer__list"><a class="footer__list__links" href="#tickets">Tickets</a></li>
-                                <li class="footer__list"><a class="footer__list__links" href="#contacts">Contacts</a></li>
+                                <li class="footer__list item__4"><a class="footer__list__links" href="#gallery">Gallery</a></li>
+                                <li class="footer__list item__5"><a class="footer__list__links" href="#tickets">Tickets</a></li>
+                                <li class="footer__list item__6"><a class="footer__list__links" href="#contacts">Contacts</a></li>
                             </ul>
                         </div>
                     </div>
